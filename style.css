@@ -9,7 +9,6 @@ html, body {
   font-family: "Times New Roman", Times, serif;
   color: #1f1f1f;
   overflow: hidden;
-  /* Фон: лёгкие пятна + точечная сетка */
   background-color: #fbfaf7;
   background-image:
     radial-gradient(circle at 15% 20%, rgba(201, 162, 74, 0.10), transparent 45%),
@@ -100,7 +99,7 @@ body[data-direction="prev"] .slide.active {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px 46px;
+  padding: 44px 50px;
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid #e8e2d2;
   border-radius: 14px;
@@ -109,7 +108,6 @@ body[data-direction="prev"] .slide.active {
     inset 0 0 0 4px #ffffff;
 }
 
-/* Золотые уголки на карточке текста */
 .word-text::before,
 .word-text::after {
   content: '';
@@ -134,31 +132,31 @@ body[data-direction="prev"] .slide.active {
 }
 
 .letter {
-  font-size: 72px;
+  font-size: 92px;
   font-weight: bold;
   color: #c9a24a;
   line-height: 1;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   text-shadow: 0 2px 0 rgba(201, 162, 74, 0.15);
 }
 
 .word {
-  font-size: 50px;
+  font-size: 62px;
   font-weight: bold;
   line-height: 1.15;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
   color: #1a1a1a;
 }
 
 .type {
-  font-size: 26px;
+  font-size: 32px;
   font-weight: normal;
   color: #8b8b8b;
   white-space: nowrap;
 }
 
 .definition {
-  font-size: 26px;
+  font-size: 32px;
   line-height: 1.55;
   color: #333333;
 }
@@ -180,7 +178,6 @@ body[data-direction="prev"] .slide.active {
     inset 0 0 0 6px #fbfaf7;
 }
 
-/* Золотые уголки и на рамке картинки */
 .word-image::before,
 .word-image::after {
   content: '';
@@ -212,6 +209,12 @@ body[data-direction="prev"] .slide.active {
   display: block;
 }
 
+/* ---------- Слайд «Шахтёр»: картинка крупнее ---------- */
+.wide-image .word-image img {
+  max-height: 82vh;
+  object-fit: contain;
+}
+
 /* ---------- Слайд с ресурсами ---------- */
 .resources-slide {
   display: flex;
@@ -225,11 +228,11 @@ body[data-direction="prev"] .slide.active {
 .resources-slide h2 {
   position: relative;
   z-index: 2;
-  font-size: 52px;
+  font-size: 64px;
   color: #1a1a1a;
-  margin-bottom: 46px;
+  margin-bottom: 50px;
   border-bottom: 3px solid #c9a24a;
-  padding-bottom: 14px;
+  padding-bottom: 16px;
 }
 
 .resources-slide ul {
@@ -239,20 +242,19 @@ body[data-direction="prev"] .slide.active {
 }
 
 .resources-slide li {
-  font-size: 28px;
-  margin-bottom: 24px;
-  padding-left: 28px;
+  font-size: 34px;
+  margin-bottom: 28px;
+  padding-left: 32px;
   position: relative;
 }
 
-/* Ромбик-маркер у ссылок */
 .resources-slide li::before {
   content: '';
   position: absolute;
   left: 0;
   top: 50%;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background: #c9a24a;
   transform: translateY(-50%) rotate(45deg);
   border-radius: 2px;
@@ -292,9 +294,9 @@ body[data-direction="prev"] .slide.active {
 
 .nav button {
   font-family: "Times New Roman", Times, serif;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
-  padding: 12px 30px;
+  padding: 12px 32px;
   background: #ffffff;
   color: #1a1a1a;
   border: 2px solid #c9a24a;
@@ -315,9 +317,9 @@ body[data-direction="prev"] .slide.active {
 }
 
 .counter {
-  font-size: 24px;
+  font-size: 26px;
   color: #1a1a1a;
-  min-width: 90px;
+  min-width: 100px;
   text-align: center;
   background: rgba(255, 255, 255, 0.9);
   padding: 8px 16px;
@@ -337,11 +339,15 @@ body[data-direction="prev"] .slide.active {
   .word-image img {
     max-height: 40vh;
   }
-  .word { font-size: 40px; }
-  .letter { font-size: 56px; }
-  .definition { font-size: 24px; }
-  .word-text { padding: 28px 30px; }
+  .wide-image .word-image img {
+    max-height: 55vh;
+  }
+  .word { font-size: 44px; }
+  .letter { font-size: 62px; }
+  .definition { font-size: 26px; }
+  .type { font-size: 26px; }
+  .word-text { padding: 28px 32px; }
   .resources-slide { padding: 50px 40px; }
-  .resources-slide h2 { font-size: 40px; }
-  .resources-slide li { font-size: 24px; }
+  .resources-slide h2 { font-size: 42px; }
+  .resources-slide li { font-size: 26px; }
 }
